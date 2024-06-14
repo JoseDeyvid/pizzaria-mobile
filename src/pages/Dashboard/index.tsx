@@ -13,6 +13,7 @@ const Dashboard = () => {
   const navigation = useNavigation<NativeStackNavigationProp<StackParamsList>>();
   const [table, setTable] = useState<string>("");
   const { openOrder, order } = useContext(OrderContext);
+  // const {signOut} = useContext(AuthContext);
 
   const handleOrder = async () => {
     if (await openOrder({ table })) {

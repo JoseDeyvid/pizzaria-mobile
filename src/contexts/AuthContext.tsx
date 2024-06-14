@@ -47,7 +47,7 @@ const AuthProvider = ({ children }: ContextProps) => {
         api.defaults.headers.common["Authorization"] = `Bearer ${hasUser.token}`;
         setUser(hasUser);
       }
-
+      
       setLoading(false);
 
     }
@@ -67,7 +67,7 @@ const AuthProvider = ({ children }: ContextProps) => {
       api.defaults.headers.common["Authorization"] = `Bearer ${res.data.token}`;
       setLoadingAuth(false);
     } catch (error) {
-      console.log("Tem algo errado: ", error);
+      console.log(error);
       setLoadingAuth(false);
     }
   }
